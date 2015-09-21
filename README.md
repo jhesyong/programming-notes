@@ -1,2 +1,2 @@
-# programming-notes
+# Programming Notes
 My notes about programming
