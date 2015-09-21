@@ -2,6 +2,10 @@
 My notes about programming
 
 ## MySQL
+### Create user and grant privileges
+    CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
+    GRANT ALL PRIVILEGES ON dbname.* To 'user'@'localhost' IDENTIFIED BY 'password';
+
 ### Kill background process
     killall -9 mysqld
 
