@@ -1,7 +1,20 @@
 # Programming Notes
 My notes about programming
 
+## MySQL
+### Kill background process
+    killall -9 mysqld
 
+### Character set & Collate
+    ALTER DATABASE dbname DEFAULT CHARACTER SET='utf8';
+    ALTER DATABASE dbname DEFAULT Collate='utf8_unicode_ci';
+
+## Git
+### Archive all files
+    git archive HEAD --format=zip > archive.zip
+
+### Zip different files between commits
+    git diff --name-only commit_old commit_new | zip filename.zip -@
 
 ## NPM
 ### Fix permission issue
@@ -10,3 +23,6 @@ My notes about programming
 ## MacOS
 ### Refresh LaunchPad
     rm ~/Library/Application\ Support/Dock/*.db ; killall Dock
+
+### Create symbolic link
+    ln -s to_be_linked where_to_put_link
