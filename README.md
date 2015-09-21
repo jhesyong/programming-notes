@@ -25,6 +25,13 @@
 ### Zip different files between commits
     git diff --name-only commit_old commit_new | zip filename.zip -@
 
+## Deployment
+### Set folder permission
+Make both the user and apache (www-data) able to access the folder (including files created afterward).
+
+    sudo chown -R $(whoami):www-data folder_name
+    sudo chmod -R g+s folder_name
+
 ## NPM
 ### Fix permission issue
     sudo chown -R $(whoami) ~/.npm
