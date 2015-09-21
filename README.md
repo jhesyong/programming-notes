@@ -1,5 +1,10 @@
 # Programming Notes
-My notes about programming
+
+## PHP
+### Set error log file
+    ini_set("log_errors" , "1");
+    ini_set("error_log" , "errors.log.txt");
+    ini_set("display_errors" , "0");
 
 ## MySQL
 ### Create user and grant privileges
