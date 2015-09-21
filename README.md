@@ -6,6 +6,26 @@
     ini_set("error_log" , "errors.log.txt");
     ini_set("display_errors" , "0");
 
+## Ionic
+### Solve same-origin policy while development
+In `ionic.project`, add
+
+    "proxies": [
+      {
+        "path": "/api",
+        "proxyUrl": "http://some.where/api"
+      }
+    ]
+    
+In code, do like this
+
+    var server = 'http://some.where/api';
+    
+    // if origin exists, use proxy
+    if (location && location.origin.indexOf('http') === 0) {
+      server = location.origin + '/api';
+    }
+
 ## MySQL
 ### Create user and grant privileges
     CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
